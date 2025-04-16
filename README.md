@@ -7,5 +7,6 @@ Mazen Mahmood - (Manual)
 Kareem Gomma - (Manual)
 Ahmed Helmy - (Manual)
 
+*An export of our manual test cases and bug executions is available on the drive.
 Our Drive : https://drive.google.com/drive/folders/1kBAmpcCpYr9pgHo_ubtJVMG4AYaDwhXa?usp=drive_link
 
