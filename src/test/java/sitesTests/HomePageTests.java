@@ -42,4 +42,10 @@ public class HomePageTests extends BaseTest {
 
     }
 
+    @Test(dependsOnMethods = "logoutTest")
+    public void backClick(){
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
+        Assert.assertEquals(driver.getCurrentUrl(),"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login","returned you to home page!");
+    }
+
 }
