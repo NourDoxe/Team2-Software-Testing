@@ -7,7 +7,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 
@@ -16,7 +18,7 @@ import java.time.Duration;
 public class BaseTest {
     WebDriver driver;
 
-    @BeforeMethod
+    @BeforeClass
     public void setup(){
         EdgeOptions options = new EdgeOptions();
         options.addArguments("--incognito");
@@ -29,7 +31,7 @@ public class BaseTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    @AfterMethod
+    @AfterClass
     public void tearDown(){
         if(driver!=null) {
             driver.quit();
