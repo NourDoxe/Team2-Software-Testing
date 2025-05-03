@@ -15,6 +15,8 @@ public class HomePage {
     //Locators idk yet
     By personalSubMenu = By.className("oxd-userdropdown-tab");
     By logoutBtnLocator = By.xpath("//a[@href='/web/index.php/auth/logout']");
+    By pimBtnLocator = By.xpath("//a[@href='/web/index.php/pim/viewPimModule']");
+
 
     //Constructor !
     public HomePage(WebDriver driver) {
@@ -31,6 +33,12 @@ public class HomePage {
         templogoutBtn.click();
 
         return new LoginPage(driver);
+    }
+
+    public void clickOnPIM(){
+        WebElement tempPIM = wait.until(ExpectedConditions.visibilityOfElementLocated(pimBtnLocator));
+        tempPIM.click();
+
     }
 
 
