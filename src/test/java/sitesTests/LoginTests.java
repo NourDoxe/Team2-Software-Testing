@@ -39,19 +39,7 @@ public class LoginTests extends BaseTest {
 
 
     }
-    @Test
-    public void logoutTest(){
-        loginPage = new LoginPage(driver);
-        loginPage.typeUsername("Admin");
-        loginPage.typePassword("admin123");
-        homePage = loginPage.clickLoginBtn(driver);
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.urlContains("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"));
-//hmmm idk what to do
-
-
-    }
 
 
 }
