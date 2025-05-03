@@ -34,8 +34,7 @@ public class HomePageTests extends BaseTest {
     public void logoutTest(){
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-userdropdown-tab")));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/web/index.php/auth/logout']")));
+        wait.until(ExpectedConditions.titleIs("OrangeHRM"));
 
         homePage.clickOnLogoutBtn(driver);
         Assert.assertTrue(loginPage.getLoginHeaderText().contains("Login"));

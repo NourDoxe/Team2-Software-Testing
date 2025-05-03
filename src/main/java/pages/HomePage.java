@@ -17,21 +17,19 @@ public class HomePage {
     By logoutBtnLocator = By.xpath("//a[@href='/web/index.php/auth/logout']");
 
     //Constructor !
-    public HomePage(WebDriver driver){
-        HomeDriver=driver;
+    public HomePage(WebDriver driver) {
+        HomeDriver = driver;
+        wait = new WebDriverWait(HomeDriver, Duration.ofSeconds(10));
     }
 
     //actions on the page !
-    public LoginPage clickOnLogoutBtn(WebDriver driver){
-
+    public LoginPage clickOnLogoutBtn(WebDriver driver) {
         WebElement tempPersonalMenu = wait.until(ExpectedConditions.visibilityOfElementLocated(personalSubMenu));
         tempPersonalMenu.click();
 
         WebElement templogoutBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(logoutBtnLocator));
         templogoutBtn.click();
 
-        //HomeDriver.findElement(personalSubMenu).click();
-        //HomeDriver.findElement(logoutBtnLocator).click();
         return new LoginPage(driver);
     }
 
