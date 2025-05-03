@@ -16,6 +16,7 @@ public class HomePage {
     By personalSubMenu = By.className("oxd-userdropdown-tab");
     By logoutBtnLocator = By.xpath("//a[@href='/web/index.php/auth/logout']");
     By pimBtnLocator = By.xpath("//a[@href='/web/index.php/pim/viewPimModule']");
+    By performanceBtnLocator = By.xpath("//a[@href=\"/web/index.php/performance/viewPerformanceModule\"]");
 
 
     //Constructor !
@@ -40,6 +41,12 @@ public class HomePage {
         tempPIM.click();
 
     }
+    public void clickOnPerfomance(){
+        WebElement tempPer = wait.until(ExpectedConditions.visibilityOfElementLocated(performanceBtnLocator));
+        tempPer.click();
+
+    }
+
 
 
 
