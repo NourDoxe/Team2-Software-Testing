@@ -13,6 +13,8 @@ public class LoginTests extends BaseTest {
     LoginPage loginPage;
     HomePage homePage;
 
+    // login functionality with the right and wrong credentials while checking what site are we on
+
     @Test
     public void loginTest(){
         loginPage = new LoginPage(driver);

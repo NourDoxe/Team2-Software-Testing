@@ -14,6 +14,8 @@ public class HomePageTests extends BaseTest {
     LoginPage loginPage;
     HomePage homePage;
 
+    //checking logout functionality and if you retract after logging out do you return
+
     @Test
     public void loginTest(){
         loginPage = new LoginPage(driver);
@@ -44,8 +46,8 @@ public class HomePageTests extends BaseTest {
 
     @Test(dependsOnMethods = "logoutTest")
     public void backClick(){
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
-        Assert.assertEquals(driver.getCurrentUrl(),"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login","returned you to home page!");
+        driver.navigate().back();
+        Assert.assertEquals(driver.getCurrentUrl(),"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login","it returned you to home page!");
     }
 
 }
