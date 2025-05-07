@@ -2,6 +2,7 @@ package sitesTests;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.AfterClass;
@@ -18,11 +19,12 @@ public class BaseTest {
 
     @BeforeClass
     public void setup(){
-        driver = new ChromeDriver();
 
-        /* EdgeOptions options = new EdgeOptions();
+
+
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
-        driver = new EdgeDriver(options); */
+        driver = new ChromeDriver(options);
 
 
         driver.manage().window().maximize();
