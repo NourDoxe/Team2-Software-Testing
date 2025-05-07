@@ -1,18 +1,18 @@
 package sitesTests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import pages.HomePage;
 
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.time.Duration;
 
 public class BaseTest {
@@ -20,15 +20,26 @@ public class BaseTest {
 
     @BeforeClass
     public void setup(){
-        EdgeOptions options = new EdgeOptions();
+        //driver = new ChromeDriver();
+
+         EdgeOptions options = new EdgeOptions();
         options.addArguments("--incognito");
         driver = new EdgeDriver(options);
 
-        //driver = new EdgeDriver;
 
         driver.manage().window().maximize();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+    //screenshot
+    public static void takeScreenShot (WebDriver driver , String filePath ){
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE) ;
+        try {
+            Files.copy(screenshot.toPath(), new File (filePath).toPath(), StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            throw new RuntimeException("failed to save screen shot to " + filePath ,e);
+        }
     }
 
     @AfterClass

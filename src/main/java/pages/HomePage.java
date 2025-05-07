@@ -11,40 +11,43 @@ import java.time.Duration;
 public class HomePage {
     //WebDriver of the page
     WebDriver HomeDriver;
-    WebDriverWait wait = new WebDriverWait(HomeDriver, Duration.ofSeconds(10));
-    //Locators idk yet
+    WebDriverWait wait;
+    //Locators
     By personalSubMenu = By.className("oxd-userdropdown-tab");
     By logoutBtnLocator = By.xpath("//a[@href='/web/index.php/auth/logout']");
-    By pimBtnLocator = By.xpath("//a[@href='/web/index.php/pim/viewPimModule']");
-    By performanceBtnLocator = By.xpath("//a[@href=\"/web/index.php/performance/viewPerformanceModule\"]");
-
+    By pimBtnLocator = By.xpath("//span[text()='PIM']");
+    By RecordFoundTextLocator = By.xpath("//span[contains(.,' Records Found')]");
 
     //Constructor !
     public HomePage(WebDriver driver) {
         HomeDriver = driver;
-        wait = new WebDriverWait(HomeDriver, Duration.ofSeconds(10));
     }
 
     //actions on the page !
-    public LoginPage clickOnLogoutBtn(WebDriver driver) {
+    public void clickOnLogoutBtn(WebDriver driver) {
+        wait = new WebDriverWait(HomeDriver, Duration.ofSeconds(10));
         WebElement tempPersonalMenu = wait.until(ExpectedConditions.visibilityOfElementLocated(personalSubMenu));
         tempPersonalMenu.click();
 
         WebElement templogoutBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(logoutBtnLocator));
         templogoutBtn.click();
 
-        return new LoginPage(driver);
+        new LoginPage(driver);
     }
 
-    public void clickOnPIM(){
-        WebElement tempPIM = wait.until(ExpectedConditions.visibilityOfElementLocated(pimBtnLocator));
-        tempPIM.click();
+    // click on pim
+    public HomePage clickOnPimBtn(){
+        wait = new WebDriverWait(HomeDriver, Duration.ofSeconds(10));
+        WebElement tempPimBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(pimBtnLocator));
+        tempPimBtn.click();
 
+        return this;
     }
-    public void clickOnPerfomance(){
-        WebElement tempPer = wait.until(ExpectedConditions.visibilityOfElementLocated(performanceBtnLocator));
-        tempPer.click();
 
+    public String getRecordFoundText () {
+        WebDriverWait wait = new WebDriverWait(HomeDriver, Duration.ofSeconds(10));
+        WebElement tempRecordFoundText = wait.until(ExpectedConditions.visibilityOfElementLocated(RecordFoundTextLocator));
+        return tempRecordFoundText.getText();
     }
 
 
