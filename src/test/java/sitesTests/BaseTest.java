@@ -3,8 +3,6 @@ package sitesTests;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -19,8 +17,6 @@ public class BaseTest {
 
     @BeforeClass
     public void setup(){
-
-
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
