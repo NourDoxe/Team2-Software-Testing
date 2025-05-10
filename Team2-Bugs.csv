@@ -1,70 +1,9 @@
-﻿Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Labels,Description,Environment,Watchers,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Inward issue link (Blocks),Inward issue link (Relates),Inward issue link (Relates),Attachment,Attachment,Attachment,Custom field (Acceptance Criteria  ),Custom field (Actual Results),Custom field (Actual end),Custom field (Actual start),Custom field (Change reason),Custom field (Change risk),Custom field (Change type),Custom field (Development),Custom field (Epic Color),Custom field (Epic Name),Custom field (Epic Status),Custom field (Expected Results),Custom field (Goals),Custom field (Impact),Custom field (Issue color),Custom field (Locked forms),Custom field (Open forms),Custom field (Project overview key),Custom field (Project overview status),Custom field (Rank),Custom field (Request Type),Custom field (Sentiment),Custom field (Sevirity),Sprint,Custom field (Start date),Custom field (Steps),Custom field (Steps to Reproduce),Custom field (Story Points),Custom field (Story point estimate),Custom field (Submitted forms),Custom field (Target end),Custom field (Target start),Team Id,Team Name,Custom field (Total forms),Custom field (Vulnerability),Custom field ([CHART] Date of First Response),Custom field ([CHART] Time in Status),Status Category,Status Category Changed
- Orange HRM - Leave Request - Admin can't complete leave approval,DEPI-286,10697,Bug,To Do,DEPI,DEPI-385-FinalProject,software,DEPI 385,712020:48b9501b-17c1-498b-87ee-202b1a36f6f3,,Medium,,Ahmed helmy,712020:2c25841b-b2fd-4255-82e4-1fcd9e52f8c8,Ahmed helmy,712020:2c25841b-b2fd-4255-82e4-1fcd9e52f8c8,Ahmed helmy,712020:2c25841b-b2fd-4255-82e4-1fcd9e52f8c8,04/May/25 10:46 PM,04/May/25 11:32 PM,04/May/25 11:36 PM,,,0,Team2,"When trying to finalize the approval of a pending leave request via the Leave List as an Admin, the ""Approve"" button is either not shown, inactive, or appears empty, which blocks the approval process from being completed",,Ahmed helmy,712020:2c25841b-b2fd-4255-82e4-1fcd9e52f8c8,,,,,,,,,,DEPI-4,DEPI-285,,,,,"The ""Approve"" button is not visible on the screen",,,,,,,,,,"Admin should see a properly labeled and enabled ""Approve"" button, allowing them to successfully change the leave status to ""Approved""..",,,,,,,,0|i001qn:,,,Medium,Sprint 1,,,"# Open the [OrangeHRM|https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList] portal
-# Log in using valid admin credentials
-# Click on the ""Leave"" section
-# At the top, select ""Assign Leave""
-# Input the employee’s name
-# Choose the appropriate leave category
-# Set the start and end dates
-# Optionally, choose partial days
-# Optionally, enter a comment
-# Attempt to click on the ""Approve"" button",,,,,,58509719-a7c3-4692-8703-cc84346ef646,Team2,,,,,To Do,04/May/25 10:46 PM
-OrangeHRM - Account Number Field Accepts Alphabetic Characters,DEPI-283,10674,Bug,To Do,DEPI,DEPI-385-FinalProject,software,DEPI 385,712020:48b9501b-17c1-498b-87ee-202b1a36f6f3,,Highest,,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,04/May/25 3:20 AM,04/May/25 3:20 AM,04/May/25 11:21 PM,,,0,Team2,"The *Account Number* field under the *""Include Direct Deposit Details""* section allows users to enter alphabetic characters and special symbols along with numbers. As per standard financial requirements, this field should only accept numeric values.",,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,,,,,,,,,,DEPI-282,DEPI-7,,,,,The system *accepts input with alphabets and special characters* and *saves the details* without any validation error.,,,,,,,,,,"* The Account Number field should only accept numeric values.
-* If non-numeric characters are entered, a validation message should appear (e.g., _""Account Number must contain numbers only.""_)",,,,,,,,0|i001pz:,,,Highest,Sprint 1,,,"# Navigate to OrangeHRM
-# Login as Admin
-# Go to PIM > Employee List
-# Select an Employee
-# Click on the Salary tab
-# Click Add Salary Component
-# Fill in the required fields
-# Toggle the ""Include Direct Deposit Details"" option
-# Enter alphabetic or special characters (e.g., ""ABC@123"") in the Account Number field
-# Click Save",,,,,,58509719-a7c3-4692-8703-cc84346ef646,Team2,,,,,To Do,04/May/25 3:20 AM
-OrangeHRM - Manage Payroll - Verify Cancel Button Functionality,DEPI-281,10670,Bug,To Do,DEPI,DEPI-385-FinalProject,software,DEPI 385,712020:48b9501b-17c1-498b-87ee-202b1a36f6f3,,High,,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,04/May/25 2:50 AM,04/May/25 2:50 AM,,,,0,Team2,"When trying to add a new Salary Component in the PIM module, the Pay Grade dropdown list is empty and displays ""No Records Found"". This prevents the user from selecting a pay grade for the employee's salary component.",,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,,,,,,,,,,DEPI-280,DEPI-7,,,,,Dropdown shows *No Records Found* in Pay Grade field,,,,,,,,,,System should display a list of configured Pay Grades in the dropdown,,,,,,,,0|i001pj:,,,Medium,Sprint 1,,,"# Navigate to OrangeHRM
-# Login as Admin
-# Go to PIM > Employee List
-# Select an Employee
-# Click on Salary tab
-# Click on the Pay Grade dropdown list",,,,,,58509719-a7c3-4692-8703-cc84346ef646,Team2,,,,,To Do,04/May/25 2:50 AM
-Orange HRM – Manage Payroll – System allows duplicate salary components for same employee Priority: Highest,DEPI-279,10666,Bug,To Do,DEPI,DEPI-385-FinalProject,software,DEPI 385,712020:48b9501b-17c1-498b-87ee-202b1a36f6f3,,Highest,,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,04/May/25 2:32 AM,04/May/25 2:32 AM,,,,0,Team2,"Inside the PIM module under the Salary section, the system lets users add the same salary component more than once with identical values for the same employee—no error or validation shows up.
-This could mess up payroll calculations due to duplicated data.",,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,,,,,,,,,,DEPI-278,DEPI-7,,,,,The system saved the duplicate salary component without any warning. Both entries appear in the salary list.,,,,,,,,,,"System should not allow the duplicate and should show a validation message (like ""This component already exists"").",,,,,,,,0|i001p3:,,,Highest,Sprint 1,,,"# Navigate to OrangeHRM
-# Login as Admin
-# Go to PIM > Employee List
-# Select an Employee
-# Click on Salary tab
-# Click Add Salary Component
-# Click Save",,,,,,58509719-a7c3-4692-8703-cc84346ef646,Team2,,,,,To Do,04/May/25 2:32 AM
- Orange HRM - View Employee Records: Unstable List of All Employees,DEPI-201,10356,Bug,To Do,DEPI,DEPI-385-FinalProject,software,DEPI 385,712020:48b9501b-17c1-498b-87ee-202b1a36f6f3,,High,,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,11/Apr/25 9:47 PM,04/May/25 9:33 AM,04/May/25 12:29 PM,,,0,Team2,This test case verifies that the system consistently displays the correct and stable list of all employee records when accessing the *PIM (Personnel Information Management)* section.,,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,,,,,,,,,,DEPI-6,DEPI-130,11/Apr/25 9:40 PM;ug:42d489fd-32a6-48f4-bcde-4e615ab39bca;Screenshot 2025-04-11 192541.png;https://depi385r2.atlassian.net/rest/api/3/attachment/content/10308,11/Apr/25 9:40 PM;ug:42d489fd-32a6-48f4-bcde-4e615ab39bca;Screenshot 2025-04-11 192724.png;https://depi385r2.atlassian.net/rest/api/3/attachment/content/10309,,,The number of employees displayed is different after re-entering the *PIM* section. The list of employees is unstable and inconsistent.,,,,,,,,,,The system should consistently display the same number of employee records in the *PIM* section each time it is accessed.,,,,,,,,0|i0017z:,,,High,Sprint 1,,,"# Open a browser
-# Navigate to [https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index|https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index|smart-link]
-# Enter valid credentials:
-## *Username:* Admin
-## *Password:* admin1234
-# Click on *PIM* in the left side menu
-# Observe the displayed employee records.
-# Exit the *PIM* section.
-# Re-enter the *PIM* section.
-# Observe the employee number displayed.
-
-h2. ",,,,,,58509719-a7c3-4692-8703-cc84346ef646,Team2,,,,,To Do,11/Apr/25 9:47 PM
-Orange HRM - View Employee Records: Search and Filter Functionality,DEPI-190,10345,Bug,To Do,DEPI,DEPI-385-FinalProject,software,DEPI 385,712020:48b9501b-17c1-498b-87ee-202b1a36f6f3,,High,,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,11/Apr/25 9:19 PM,04/May/25 9:04 PM,04/May/25 9:33 AM,,,0,Team2, verifies that the user can search for and filter specific employee records in the PIM section.,,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,,,,,,,,,,DEPI-6,DEPI-273,11/Apr/25 9:09 PM;ug:42d489fd-32a6-48f4-bcde-4e615ab39bca;Screenshot 2025-04-11 190539.png;https://depi385r2.atlassian.net/rest/api/3/attachment/content/10298,11/Apr/25 9:09 PM;ug:42d489fd-32a6-48f4-bcde-4e615ab39bca;Screenshot 2025-04-11 190628.png;https://depi385r2.atlassian.net/rest/api/3/attachment/content/10300,11/Apr/25 9:09 PM;ug:42d489fd-32a6-48f4-bcde-4e615ab39bca;Screenshot 2025-04-11 191433.png;https://depi385r2.atlassian.net/rest/api/3/attachment/content/10299,,"When searching by employee ID or selecting ""Past Employee"" in the filter, the system does not display any search results (shows nothing).",,,,,,,,,,"* When searching by name or employee ID, the system should display the specific employee and their details.
-* The *Search and Filter* functionality should work correctly for both current and past employees.",,,,,,,,0|i0015r:,,,Medium,Sprint 1,,,"# Open a browser
-# Navigate to [https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index|https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index|smart-link]
-# Enter valid credentials:
-## *Username:* Admin
-## *Password:* admin1234
-# Click on *PIM* in the left side menu
-# Use the search bar or filter options to search for a specific employee by:
-## Name
-## Employee ID
-## Current or Past Employee status
-# Observe the search results.",,,,,,58509719-a7c3-4692-8703-cc84346ef646,Team2,,,,,To Do,04/May/25 9:04 PM
-Orange HRM - Logout Functionality: Session Expiration,DEPI-186,10341,Bug,To Do,DEPI,DEPI-385-FinalProject,software,DEPI 385,712020:48b9501b-17c1-498b-87ee-202b1a36f6f3,,High,,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,11/Apr/25 8:46 PM,04/May/25 10:05 PM,04/May/25 10:05 PM,,,0,Team2," verifies that after logging out, when a user presses the browser back button, they should not be able to access the dashboard. Instead, the system should redirect to the login page to indicate the session has expired.",,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,,,,,,,,,DEPI-251,DEPI-129,DEPI-2,11/Apr/25 9:58 PM;ug:42d489fd-32a6-48f4-bcde-4e615ab39bca;Recording 2025-04-11 204538.mp4;https://depi385r2.atlassian.net/rest/api/3/attachment/content/10310,,,,"After pressing the back button, the user can still access the dashboard.",,,,,,,,,,"After pressing the back button, the user should not be able to access the dashboard. The application should redirect to the login page, indicating that the session has expired.",,,,,,,,0|i0014v:,,,High,Sprint 1,,,"# Open a browser
-# Navigate to [https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index|https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index|smart-link]
-# Enter valid credentials:
-#* *Username:* Admin
-#* *Password:* admin1234
-# Click the *Login* button
-# Click on the username at the top right corner of the dashboard
-# Click on the *Logout* option
-# Press the browser *Back* button
-# Observe whether the user can access the dashboard.",,,,,,58509719-a7c3-4692-8703-cc84346ef646,Team2,,,,,To Do,04/May/25 9:05 PM
+﻿Issue Type,Issue key,Issue id,Summary,Assignee,Assignee Id,Reporter,Reporter Id,Priority,Status,Resolution,Created,Updated,Due date
+Bug,DEPI-290,10705,Orange HRM - Performance Reviews - Supervisor Reviewer Field Displays “No Records Found,Ahmed helmy,712020:2c25841b-b2fd-4255-82e4-1fcd9e52f8c8,Ahmed helmy,712020:2c25841b-b2fd-4255-82e4-1fcd9e52f8c8,Medium,To Do,,04/May/25 11:55 PM,04/May/25 11:56 PM,
+Bug,DEPI-286,10697, Orange HRM - Leave Request - Admin can't complete leave approval,Ahmed helmy,712020:2c25841b-b2fd-4255-82e4-1fcd9e52f8c8,Ahmed helmy,712020:2c25841b-b2fd-4255-82e4-1fcd9e52f8c8,Medium,To Do,,04/May/25 10:46 PM,04/May/25 11:32 PM,
+Bug,DEPI-283,10674,OrangeHRM - Account Number Field Accepts Alphabetic Characters,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,Highest,To Do,,04/May/25 3:20 AM,04/May/25 3:20 AM,
+Bug,DEPI-281,10670,OrangeHRM - Manage Payroll - Verify Cancel Button Functionality,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,High,To Do,,04/May/25 2:50 AM,04/May/25 2:50 AM,
+Bug,DEPI-279,10666,Orange HRM – Manage Payroll – System allows duplicate salary components for same employee Priority: Highest,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,mazen gamer11,712020:8fc32277-1786-41e5-8f99-547b591806ad,Highest,To Do,,04/May/25 2:32 AM,04/May/25 2:32 AM,
+Bug,DEPI-201,10356, Orange HRM - View Employee Records: Unstable List of All Employees,DEPI 385,712020:48b9501b-17c1-498b-87ee-202b1a36f6f3,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,High,To Do,,11/Apr/25 9:47 PM,05/May/25 2:24 AM,
+Bug,DEPI-190,10345,Orange HRM - View Employee Records: Search and Filter Functionality,DEPI 385,712020:48b9501b-17c1-498b-87ee-202b1a36f6f3,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,High,To Do,,11/Apr/25 9:19 PM,05/May/25 2:23 AM,
+Bug,DEPI-186,10341,Orange HRM - Logout Functionality: Session Expiration,DEPI 385,712020:48b9501b-17c1-498b-87ee-202b1a36f6f3,Kareem gomaa,712020:8d589632-9285-4ed8-9aa9-fb48f16d0e82,High,To Do,,11/Apr/25 8:46 PM,05/May/25 2:23 AM,
